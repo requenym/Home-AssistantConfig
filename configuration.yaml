@@ -1,0 +1,68 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 10
+  unit_system: imperial
+  time_zone: America/New_York
+  # Customization file
+  customize: !include customize.yaml
+
+
+frontend:
+config:
+
+
+
+updater:
+    include_used_components: true
+
+discovery:
+conversation:
+history:
+logbook:
+map:
+sun:
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: darksky
+    api_key: !secret darksky_api_key
+    monitored_conditions: 
+     - summary
+     - icon
+     - temperature
+     - precip_probability
+  # uptime reporting
+  - platform: uptime
+    name: System Uptime
+    unit_of_measurement: days
+  # UPS delivery 
+  - platform: ups
+    username: !secret ups_username
+    password: !secret ups_password
+  # FedEx delivery 
+  - platform: fedex
+    username: !secret fedex_username
+    password: !secret fedex_password
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+ffmpeg:
+
+duckdns:
+  domain: !secret duckdns_domain
+  access_token: !secret duckdns_access_token
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
