@@ -1,1 +1,18 @@
-
+sensor.wireless_router_tlwr841n_bytes_received:
+  friendly_name: Router bytes received
+sensor.wireless_router_tlwr841n_bytes_sent:
+  friendly_name: Router bytes sent
+sensor.wireless_router_tlwr841n_kbytesec_received:
+  friendly_name: Router kbyte/sec received
+sensor.wireless_router_tlwr841n_kbytesec_sent:
+  friendly_name: Router kbyte/sec sent
+sensor.wireless_router_tlwr841n_packets_received:
+  friendly_name: Router packets received
+sensor.wireless_router_tlwr841n_packets_sent:
+  friendly_name: Router packets sent
+sensor.wireless_router_tlwr841n_packetssec_received:
+  friendly_name: Router packets/sec received
+sensor.wireless_router_tlwr841n_packetssec_sent:
+  friendly_name: Router packets/sec sent
+sensor.ups:
+  friendly_name: UPS Packages
