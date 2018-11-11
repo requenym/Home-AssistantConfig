@@ -24,6 +24,17 @@ logbook:
 map:
 sun:
 
+
+input_select:
+  hass_theme:
+    name: HASS Themes
+    options:
+      - default
+      - Dark - Green
+      - Dark - Gray
+    initial: default
+    icon: mdi:theme-light-dark
+
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
