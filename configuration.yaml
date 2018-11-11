@@ -31,13 +31,7 @@ input_select:
     options:
       - default
       - Dark - Green
-      - solarized
-      - dark_orange
-      - midnight
-      - dark_red
-      - dark_blue
-      - dark_theme
-      - teal_theme
+      - Dark - Gray
     initial: default
     icon: mdi:theme-light-dark
 
